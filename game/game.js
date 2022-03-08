@@ -92,7 +92,7 @@ function moveInvaders() {
     }
   }
   if (aliensRemoved.length === alienInvaders.length) {
-    resultsDisplay.innerHTML = "MESS WITH BULL, YOU GET THE UDDERS";
+    resultsDisplay.innerHTML = "MESS WITH THE BULL, YOU GET THE UDDERS";
     clearInterval(invadersId);
   }
 }
