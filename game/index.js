@@ -3,7 +3,7 @@ const loginForm = document.querySelector("#login-form");
 const registerForm = document.querySelector("#register-form");
 const mooButton = document.querySelector("#intro")
 
-const baseURL = `http://localhost:3456/game`;
+const baseURL = `http://localhost:3456`;
 
 const login = (body) =>
   axios
@@ -20,7 +20,7 @@ const register = (body) =>
   axios
     .post(`${baseURL}/api/register`, body)
     .then((res) => {
-      createUserCard(res.data);
+      // createUserCard(res.data);
   window.location.href = "./intro.html" 
     })
     .catch((err) => {
@@ -77,22 +77,22 @@ function registerSubmitHandler(e) {
   lastName.value = "";
   password.value = "";
   password2.value = "";
-  // window.location.href = "./intro.html" 
 }
 
-function createUserCard(data) {
-  userContainer.innerHTML = "";
-  const userCard = document.createElement("div");
-  userCard.classList.add("user-card");
+// function createUserCard(data) {
+//   console.log(data)
+//   // userContainer.innerHTML = "";
+//   const userCard = document.createElement("div");
+//   userCard.classList.add("user-card");
 
-  userCard.innerHTML = `<p class="username">Username: ${data.username}</p>
-    <p class="email">Email: ${data.email}</p>
-    <p class="first-name">First Name: ${data.firstName}</p>
-    <p class="last-name">Last Name: ${data.lastName}</p>
-    `;
+//   userCard.innerHTML = `<p class="username">Username: ${data.username}</p>
+//     <p class="email">Email: ${data.email}</p>
+//     <p class="first-name">First Name: ${data.firstName}</p>
+//     <p class="last-name">Last Name: ${data.lastName}</p>
+//     `;
 
-  userContainer.appendChild(userCard);
-}
+//   userContainer.appendChild(userCard);
+// }
 
 loginForm.addEventListener("submit", loginSubmitHandler);
 registerForm.addEventListener("submit", registerSubmitHandler);
