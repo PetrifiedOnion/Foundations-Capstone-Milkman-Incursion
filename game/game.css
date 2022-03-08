@@ -12,15 +12,19 @@
 }
 
 .invader {
-  background-color: purple;
+  background-color: rgb(0, 128, 128);
   border-radius: 10px;
 }
 
 .shooter {
-  background-color: green;
+  width: 25px;
+  height: 35px;
+  background: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload-assets.vice.com%2Ffiles%2F2016%2F07%2F08%2F1467995206PugOfWar.gif&f=1&nofb=1) 0 0;
 }
 
 .laser {
+  width: 15px;
+  height: 20px;
   background-color: orange;
 }
 
