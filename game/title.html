@@ -12,7 +12,6 @@
 <h2>The Milkman Cometh...</h2>
 <body>
     <main>
-
     <form id="login-form">
         <h3>RE-ENLIST TODAY!</h3>
         <input 
@@ -58,12 +57,15 @@
         <nav>
             <ol>
                 <li class="crumb"><a href="./title.html">Home</a></li>
-                <li class="crumb"><a href="./intro.html">Intro</a></li>
-                <li class="crumb"><a href="./index.html">Fight!</a></li>
+                <li class="crumb" id="intro"><a href="./intro.html">Intro</a></li>
+                <li class="crumb"><a href="./game.html">Fight!</a></li>
             </ol>
         </nav>
     </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="title.js"></script>
+    <script src="index.js"></script>
+    <script src="server/controllers/auth.js"></script>
+    <script src="server/index.js"></script>
+
 </body>
 </html>
