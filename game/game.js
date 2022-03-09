@@ -89,7 +89,7 @@ function moveInvaders() {
   for (let i = 0; i < alienInvaders.length; i++) {
     if (alienInvaders[i] > squares.length) {
       resultsDisplay.textContent = "OUR MILK HAS BEEN SPILLED!!!";
-      resultsDisplay.style.color = "white";
+    resultsDisplay.style.color = "white";
       clearInterval(invadersId);
     }
   }
