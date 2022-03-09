@@ -1,5 +1,5 @@
 const grid = document.querySelector(".grid");
-const resultsDisplay = document.querySelector(".results");
+const resultsDisplay = document.querySelector("#results");
 let currentShooterIndex = 202;
 let width = 15;
 let direction = 1;
@@ -81,18 +81,21 @@ function moveInvaders() {
   draw();
 
   if (squares[currentShooterIndex].classList.contains("invader", "shooter")) {
-    resultsDisplay.innerHTML = "OUR MILK HAS BEEN SPILLED!!!";
+    resultsDisplay.textContent = "OUR MILK HAS BEEN SPILLED!!!";
+    resultsDisplay.style.color = "white";
     clearInterval(invadersId);
   }
 
   for (let i = 0; i < alienInvaders.length; i++) {
     if (alienInvaders[i] > squares.length) {
-      resultsDisplay.innerHTML = "OUR MILK HAS BEEN SPILLED!!!";
+      resultsDisplay.textContent = "OUR MILK HAS BEEN SPILLED!!!";
+      resultsDisplay.style.color = "white";
       clearInterval(invadersId);
     }
   }
   if (aliensRemoved.length === alienInvaders.length) {
-    resultsDisplay.innerHTML = "MESS WITH THE BULL, YOU GET THE UDDERS";
+    resultsDisplay.textContent = "MESS WITH THE BULL, YOU GET THE UDDERS";
+    resultsDisplay.style.color = "white";
     clearInterval(invadersId);
   }
 }
