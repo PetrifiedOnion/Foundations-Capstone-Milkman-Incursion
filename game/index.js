@@ -20,7 +20,6 @@ const register = (body) =>
   axios
     .post(`${baseURL}/api/register`, body)
     .then((res) => {
-      // createUserCard(res.data);
   window.location.href = "./intro.html" 
     })
     .catch((err) => {
@@ -78,21 +77,6 @@ function registerSubmitHandler(e) {
   password.value = "";
   password2.value = "";
 }
-
-// function createUserCard(data) {
-//   console.log(data)
-//   // userContainer.innerHTML = "";
-//   const userCard = document.createElement("div");
-//   userCard.classList.add("user-card");
-
-//   userCard.innerHTML = `<p class="username">Username: ${data.username}</p>
-//     <p class="email">Email: ${data.email}</p>
-//     <p class="first-name">First Name: ${data.firstName}</p>
-//     <p class="last-name">Last Name: ${data.lastName}</p>
-//     `;
-
-//   userContainer.appendChild(userCard);
-// }
-
+// axios.get(http://api.cowclicker.com/api/)
 loginForm.addEventListener("submit", loginSubmitHandler);
 registerForm.addEventListener("submit", registerSubmitHandler);

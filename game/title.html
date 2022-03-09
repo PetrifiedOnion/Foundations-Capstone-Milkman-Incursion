@@ -8,9 +8,12 @@
     <title>MILKMAN INCURSION</title>
     <link rel="stylesheet" href="title.css">
 </head>
-<h1>MILKMAN INCURSION!</h1>
-<h2>The Milkman Cometh...</h2>
+
 <body>
+    <div class="background">
+    </div>
+    <h1>MILKMAN INCURSION!</h1>
+<h2>The Milkman Cometh...</h2>
     <main>
     <form id="login-form">
         <h3>RE-ENLIST TODAY!</h3>
@@ -54,15 +57,28 @@
       <section>
           <style>
               body {
-                  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.DNhlWRnPTnXdhtdb6bwxMgHaEK%26pid%3DApi&f=1");
+                  /* background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.DNhlWRnPTnXdhtdb6bwxMgHaEK%26pid%3DApi&f=1"); */
                   background-repeat: no-repeat;
-                  
+                  position: relative;
+                }
+                .background{background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.DNhlWRnPTnXdhtdb6bwxMgHaEK%26pid%3DApi&f=1");
+                width: 100vw;
+                height: 100vh;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                position: absolute;
+                z-index: -5;
+                }
+                .wrapper{
+                    position: absolute;
                 }
                 </style>  
                 </section>
   </form>
 <body>
-    <div>
+   
+    <div class="wrapper">
         <nav>
             <ol>
                 <li class="crumb"><a href="./title.html">Home</a></li>
