@@ -1,7 +1,7 @@
 const userContainer = document.querySelector("#user-info");
 const loginForm = document.querySelector("#login-form");
 const registerForm = document.querySelector("#register-form");
-const mooButton = document.querySelector("#intro")
+const mooButton = document.querySelector("#intro");
 
 const baseURL = `http://localhost:3456`;
 
@@ -9,8 +9,8 @@ const login = (body) =>
   axios
     .post(`${baseURL}/api/login`, body)
     .then((res) => {
-      createUserCard(res.data)
-  window.location.href = "./intro.html" 
+      createUserCard(res.data);
+      window.location.href = "./intro.html";
     })
     .catch((err) => {
       console.log(err);
@@ -20,7 +20,7 @@ const register = (body) =>
   axios
     .post(`${baseURL}/api/register`, body)
     .then((res) => {
-  window.location.href = "./intro.html" 
+      window.location.href = "./intro.html";
     })
     .catch((err) => {
       console.log(err);
@@ -42,7 +42,7 @@ function loginSubmitHandler(e) {
 
   username.value = "";
   password.value = "";
-  window.location.href = "./intro.html" 
+  window.location.href = "./intro.html";
 }
 
 function registerSubmitHandler(e) {
@@ -77,6 +77,12 @@ function registerSubmitHandler(e) {
   password.value = "";
   password2.value = "";
 }
-// axios.get(http://api.cowclicker.com/api/)
+
+async function hello() {
+  const toast = await axios.get(`${baseURL}/api/moo`);
+  console.log(toast);
+  alert(toast.data)
+}
 loginForm.addEventListener("submit", loginSubmitHandler);
 registerForm.addEventListener("submit", registerSubmitHandler);
+hello()
